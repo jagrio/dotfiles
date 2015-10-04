@@ -1,0 +1,13 @@
+function my {
+  if [ ! $1 ]; then
+    echo "No arguments" 
+  else
+    if [ $1="dot" ]; then
+      if [ $2="folder" ]; then
+        tree $DOTFILES_DIR
+      fi
+    else
+      vim $DOTFILES_DIR/$2
+    fi
+  fi
+}

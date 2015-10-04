@@ -1,0 +1,44 @@
+alias start_dropbox='~/.dropbox-dist/dropboxd'
+
+alias irssi='TERM=screen-256color irssi'
+alias htop='TERM=screen-256color htop'
+alias tmux='TERM=screen-256color tmux'
+alias tmux="TERM=screen-256color-bce tmux"
+
+# One letter quickies
+alias x='exit'
+alias v='vim'
+alias c='clear'
+
+# Aliases to prevent you from replacing/deleting files accidently
+# alias rm='rm -i'
+# alias mv='mv -i'
+# alias cp='cp -i'
+
+# ROS aliases (make functions instead of aliases)
+alias rossource_ramcipws='source ~/ros_ws/ramcip_ws/devel/setup.bash'
+alias rossource_shadow='source ~/ros_ws/shadow/devel/setup.bash'
+alias rossource_development='source ~/ros_ws/development/devel/setup.bash'
+alias catkin_make_development='cd ~/ros_ws/development; catkin_make; cd -'
+
+# Shortcuts
+alias aptinstall='sudo apt-get install' 
+alias sbh='source ~/.bashrc'
+alias vbh='vim ~/.bashrc'
+alias labtmux='$DOTFILES_DIR/bin/lab_tmux'
+
+# Git
+alias {gsta,gst}='git status' 
+# Warning: gst conflicts with gnu-smalltalk (when used).
+alias {gbra,gb}='git branch'
+alias {gco,go}='git checkout'
+alias {gcob,gob}='git checkout -b '
+alias {gadd,ga}='git add '
+alias {gcom,gc}='git commit'
+alias {gpul,gl}='git pull '
+alias {gpus,gh}='git push '
+alias glom='git pull origin master'
+alias ghom='git push origin master'
+alias gg='git grep '
+alias gr='git reset --hard'
+alias gundo='git reset --hard HEAD~'

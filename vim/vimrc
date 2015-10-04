@@ -1,0 +1,116 @@
+"set colors to 256-value
+set t_Co=256
+
+" *** General settings like line numbers etc
+set wrap "wrap long lines
+set number "show line numbers
+set numberwidth=3 "change width of line numbers
+set ruler "show ruler in the bottom right
+set showcmd "display a commad before it finished, helpful while learing
+set incsearch "enable incremental search (after pressing /)
+set hlsearch "enable highlighting in search
+
+
+"Enable colorscheme
+syntax on
+colorscheme 256-jungle
+"colorscheme sourcerer
+
+"Show encoding in status line
+"set laststatus=2 statusline=%f\ %m\ %{&fileencoding?&fileencoding:&encoding}
+"set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+set laststatus=2 "Show status line
+set statusline=%f "Show the name of the file
+set statusline+=\ -\  "Seperator
+set statusline+=Filetype:  
+set statusline+=%y "Filetype
+set statusline+=\ -\  
+set statusline+=Line:
+set statusline+=%l "Current line
+set statusline+=/
+set statusline+=%L "Total Lines
+set statusline+=\ -\  
+set statusline+=Encoding:
+set statusline+=%{&fileencoding?&fileencoding:&encoding}
+
+"Change color when you change modes
+au InsertEnter * hi StatusLine term=reverse ctermbg=39 ctermfg=53
+au InsertLeave * hi StatusLine term=reverse ctermbg=None ctermfg=39
+
+"Save the folds when you quit the file
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+
+"Enable wrapping by \w
+noremap <silent> <Leader>w :call ToggleWrap()<CR>
+function ToggleWrap()
+  if &wrap
+    echo "Wrap OFF"
+    setlocal nowrap
+    set virtualedit=all
+    silent! nunmap <buffer> <Up>
+    silent! nunmap <buffer> <Down>
+    silent! nunmap <buffer> <Home>
+    silent! nunmap <buffer> <End>
+    silent! iunmap <buffer> <Up>
+    silent! iunmap <buffer> <Down>
+    silent! iunmap <buffer> <Home>
+    silent! iunmap <buffer> <End>
+  else
+    echo "Wrap ON"
+    setlocal wrap linebreak nolist
+    set virtualedit=
+    setlocal display+=lastline
+    noremap  <buffer> <silent> <Up>   gk
+    noremap  <buffer> <silent> <Down> gj
+    noremap  <buffer> <silent> <Home> g<Home>
+    noremap  <buffer> <silent> <End>  g<End>
+    inoremap <buffer> <silent> <Up>   <C-o>gk
+    inoremap <buffer> <silent> <Down> <C-o>gj
+    inoremap <buffer> <silent> <Home> <C-o>g<Home>
+    inoremap <buffer> <silent> <End>  <C-o>g<End>
+  endif
+endfunction
+
+" Vim will keep the indetation when you go to the next line
+set autoindent
+
+" Recognise launch files as xml files
+au BufRead,BufNewFile *.launch set filetype=xml
+au BufRead,BufNewFile *.sdf set filetype=xml
+au BufRead,BufNewFile *.md set filetype=markdown
+"autocmd BufNewFile,BufRead *.md set filetype=markdown
+
+"tab equals 2 spaces
+set tabstop=2
+set expandtab
+
+"tabs for files and tab for python files
+autocmd FileType * set tabstop=2|set shiftwidth=2|set expandtab
+autocmd FileType cpp set tabstop=2|set shiftwidth=2|set expandtab
+autocmd FileType xml set tabstop=2|set shiftwidth=2|set expandtab
+autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
+au BufEnter *.py set ai sw=4 ts=4 sta et fo=croql
+
+"map f7 f8 to switch between tabs
+map <F7> :tabp <CR>
+map <F8> :tabn <CR>
+
+map <F6> "+p 
+map <F5> "+y
+
+"Show the line breaks as a dash
+set list
+set listchars=tab:▸\ ,eol:¬
+
+"Highlight characters tha go beyond the 80th column in markdown files
+augroup vimrc_autocmds
+  autocmd FileType markdown highlight OverLength ctermfg=red ctermbg=None guibg=#592929
+  autocmd FileType markdown match OverLength /\%81v.*/
+augroup END
+
+
+augroup vimrc_autocmds
+  autocmd FileType text highlight OverLength ctermfg=red ctermbg=None guibg=#592929
+  autocmd FileType text match OverLength /\%81v.*/
+augroup END
