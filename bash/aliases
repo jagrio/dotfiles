@@ -25,7 +25,6 @@ alias catkin_make_development='cd ~/ros_ws/development; catkin_make; cd -'
 alias aptinstall='sudo apt-get install' 
 alias sbh='source ~/.bashrc'
 alias vbh='vim ~/.bashrc'
-alias labtmux='$DOTFILES_DIR/bin/lab_tmux'
 
 # Git
 alias {gsta,gst}='git status' 
