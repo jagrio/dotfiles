@@ -18,6 +18,11 @@ if [ -f /usr/local/texlive/2014/bin/x86_64-linux ]; then
     export PATH=/usr/local/texlive/2014/bin/x86_64-linux:$PATH
 fi
 
+# Export to path Iason Dotfiles if dotfiles is installed
+if [ -d $DOTFILES_DIR/bin ]; then
+    export PATH=$PATH:$DOTFILES_DIR/bin
+fi
+
 # Set some variables
 ## Change the looks of the prompt
 export PS1=$'\[\033[38;5;202m\]\W \xe2\x96\xb8\[\033[0m\] '
