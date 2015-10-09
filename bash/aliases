@@ -4,6 +4,7 @@ alias irssi='TERM=screen-256color irssi'
 alias htop='TERM=screen-256color htop'
 alias tmux='TERM=screen-256color tmux'
 alias tmux="TERM=screen-256color-bce tmux"
+alias CD="cd $HOME/Dropbox"
 
 # One letter quickies
 alias x='exit'
@@ -38,6 +39,7 @@ alias {gpul,gl}='git pull '
 alias {gpus,gh}='git push '
 alias glom='git pull origin master'
 alias ghom='git push origin master'
+alias gc='git commit -am'
 alias gg='git grep '
 alias gr='git reset --hard'
 alias gundo='git reset --hard HEAD~'

@@ -8,6 +8,10 @@ if [ -f $DOTFILES_DIR/bash/functions ]; then
     . $DOTFILES_DIR/bash/functions
 fi
 
+if [ -f $DOTFILES_DIR/bash/git-prompt.sh ]; then
+    . $DOTFILES_DIR/bash/git-prompt.sh
+fi
+
 # Source setup.bash for indigo ros if ros-indigo is installed
 if [ -f /opt/ros/indigo/setup.bash ]; then
     . /opt/ros/indigo/setup.bash
@@ -23,10 +27,19 @@ if [ -d $DOTFILES_DIR/bin ]; then
     export PATH=$PATH:$DOTFILES_DIR/bin
 fi
 
+# Export to path Iason Dotfiles if dotfiles is installed
+if [ -d $HOME/Dropbox/code/scripts ]; then
+    export PATH=$PATH:$HOME/Dropbox/code/scripts
+fi
+
+
+
 # Set some variables
 ## Change the looks of the prompt
 export PS1=$'\[\033[38;5;202m\]\W \xe2\x96\xb8\[\033[0m\] '
-
+if [ -f $DOTFILES_DIR/bash/git-prompt.sh ]; then
+  export PS1=$'\[\033[38;5;202m\]\W$(__git_ps1) \xe2\x96\xb8\[\033[0m\] '
+fi
 export LC_NUMERIC=C
 export LC_COLLATE=C
 export TERM="screen-256color"
