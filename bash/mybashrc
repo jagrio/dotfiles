@@ -8,8 +8,8 @@ if [ -f $DOTFILES_DIR/bash/functions ]; then
     . $DOTFILES_DIR/bash/functions
 fi
 
-if [ -f $DOTFILES_DIR/bash/git-prompt.sh ]; then
-    . $DOTFILES_DIR/bash/git-prompt.sh
+if [ -f $DOTFILES_DIR/git/git-prompt.sh ]; then
+    . $DOTFILES_DIR/git/git-prompt.sh
 fi
 
 # Source setup.bash for indigo ros if ros-indigo is installed
