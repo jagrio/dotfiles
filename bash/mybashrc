@@ -12,6 +12,10 @@ if [ -f $DOTFILES_DIR/git/git-prompt.sh ]; then
     . $DOTFILES_DIR/git/git-prompt.sh
 fi
 
+if [ -f $DOTFILES_DIR/git/git-completion.bash ]; then
+    . $DOTFILES_DIR/git/git-completion.bash
+fi
+
 # Source setup.bash for indigo ros if ros-indigo is installed
 if [ -f /opt/ros/indigo/setup.bash ]; then
     . /opt/ros/indigo/setup.bash
