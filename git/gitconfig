@@ -1,0 +1,10 @@
+[user]
+  name = Iason Sarantopoulos
+  email = iason@sarantop.com
+
+[alias]
+  co = checkout
+  cob = checkout -b
+
+[color]
+  ui = true
