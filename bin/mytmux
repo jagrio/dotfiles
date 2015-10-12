@@ -1,0 +1,29 @@
+#!/bin/bash 
+
+SESSION_NAME="MySession"
+
+cd ~
+
+tmux has-session -t ${SESSION_NAME}
+
+if [ $? != 0 ]
+then
+  tmux new-session -s ${SESSION_NAME} -d -n 'General' 
+  tmux split-window -h -p 26 -d 'htop'
+
+  tmux new-window -n 'vim'
+  tmux split-window -h -p 30
+
+  cd ~/Dropbox/notes
+  tmux new-window -n 'notes'
+  tmux split-window -h -p 30
+  
+  tmux new-window -n 'Programs'
+  tmux split-window -h -p 25 -d '~/.dropbox-dist/dropboxd'
+  tmux split-window -h
+  tmux split-window -v
+
+  tmux -2 attach-session -d
+fi
+
+tmux attach -t ${SESSION_NAME}
