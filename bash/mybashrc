@@ -22,8 +22,13 @@ if [ -f /opt/ros/indigo/setup.bash ]; then
 fi
 
 # Export to path texlive if Texlive2014 is installed
-if [ -f /usr/local/texlive/2014/bin/x86_64-linux ]; then
+if [ -d /usr/local/texlive/2014/bin/x86_64-linux ]; then
     export PATH=/usr/local/texlive/2014/bin/x86_64-linux:$PATH
+fi
+
+# Export to path texlive if Texlive2014 is installed
+if [ -d /usr/local/texlive/2015/bin/x86_64-linux ]; then
+    export PATH=/usr/local/texlive/2015/bin/x86_64-linux:$PATH
 fi
 
 # Export to path Iason Dotfiles if dotfiles is installed
