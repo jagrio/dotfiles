@@ -114,3 +114,7 @@ augroup vimrc_autocmds
   autocmd FileType text highlight OverLength ctermfg=red ctermbg=None guibg=#592929
   autocmd FileType text match OverLength /\%81v.*/
 augroup END
+
+let mapleader = ','
+
+nnoremap <Leader>rtw :%s/\s\+$//e<CR>
