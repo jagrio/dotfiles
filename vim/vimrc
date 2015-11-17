@@ -10,6 +10,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'bling/vim-airline'
+
 " All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
@@ -137,3 +139,11 @@ augroup END
 let mapleader = ','
 
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
+
+" airline options
+let g:airline_powerline_fonts=1
+let g:airline_right_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_left_alt_sep= ''
+let g:airline_left_sep = ''
+let g:airline_theme='luna'
