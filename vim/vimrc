@@ -43,14 +43,14 @@ colorscheme 256-jungle
 set laststatus=2 "Show status line
 set statusline=%f "Show the name of the file
 set statusline+=\ -\  "Seperator
-set statusline+=Filetype:  
+set statusline+=Filetype:
 set statusline+=%y "Filetype
-set statusline+=\ -\  
+set statusline+=\ -\
 set statusline+=Line:
 set statusline+=%l "Current line
 set statusline+=/
 set statusline+=%L "Total Lines
-set statusline+=\ -\  
+set statusline+=\ -\
 set statusline+=Encoding:
 set statusline+=%{&fileencoding?&fileencoding:&encoding}
 
@@ -117,7 +117,7 @@ au BufEnter *.py set ai sw=4 ts=4 sta et fo=croql
 map <F7> :tabp <CR>
 map <F8> :tabn <CR>
 
-map <F6> "+p 
+map <F6> "+p
 map <F5> "+y
 
 "Show the line breaks as a dash
