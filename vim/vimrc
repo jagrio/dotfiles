@@ -138,9 +138,10 @@ augroup vimrc_autocmds
   autocmd FileType text match OverLength /\%81v.*/
 augroup END
 
+" Add leader mappings
 let mapleader = ','
-
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
+nnoremap <Leader>fs :set foldmethod=syntax<CR>
 
 " airline options
 let g:airline_powerline_fonts=1
