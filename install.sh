@@ -103,4 +103,31 @@ fi
 echo "     Creating a new symlink ~/.tmux.conf"
 ln -s "$DOTFILES_DIR/tmux/tmux.conf" ~/.tmux.conf
 
-echo "Done. Source your bashrc, or restart the shell."
+echo "  Installing ViM's plugins..."
+
+# Check if git is available
+git --version 2>&1 >/dev/null
+GIT_IS_AVAILABLE=$?
+# ...
+if [ $GIT_IS_AVAILABLE -ne 0 ]; then # If $? var is not 0 then git is not installed
+  echo "    Git is not installed. Installing Git for git cloning..."
+  sudo apt-get install git
+fi
+
+echo "    Cloning Vudle (the plugin manager) from GitHub..."
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+if [ command -v vim > /dev/null 2>&1 ]; then
+  echo "    Installing ViM plug-ins with Vundle..."
+  vim +PluginInstall +qall
+fi
+
+echo "  Installing fonts..."
+echo "    Cloning powerline fonts from GitHub..."
+cd $DOTFILES_DIR
+git clone https://github.com/powerline/fonts.git
+cd fonts
+echo "    Install fonts..."
+./install.sh
+
+echo "Done. Source your bashrc, restart the shell and choose one powerline font for your terminal..."
