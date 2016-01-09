@@ -11,3 +11,29 @@ function my {
     fi
   fi
 }
+
+function dotfiles {
+  if [ ! $1 ]; then
+    echo "Your dotfiles are stored in"
+    echo $DOTFILES_DIR
+    cd $DOTFILES_DIR
+  else
+    if [ "$1" = "update" ]; then
+      echo "Updating Dotfiles..."
+      cd $DOTFILES_DIR
+      git fetch origin
+      git merge origin/master
+      cd -
+    elif [ "$1" = "help" ]; then
+      echo
+      echo "Dotfiles help - Commands:"
+      echo "  help: displays this help"
+      echo "      : the empty command will change to the dotfiles directory"
+      echo "        and will print out the path"
+      echo "update: will update the dotfiles by pulling from the Git repo"
+      echo
+    else
+      echo "dotfiles: "$1" command not found"
+    fi
+  fi
+}
