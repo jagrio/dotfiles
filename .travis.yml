@@ -2,4 +2,4 @@ language: cpp
 
 before_script: true
 
-script: install.sh
+script: ./install.sh
