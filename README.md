@@ -19,7 +19,10 @@ In order to install dotfiles open a shell and type the following commands
 ```bash
 git clone https://github.com/iSaran/dotfiles.git
 ./dotfiles/install.sh
+source ~/.bashrc
 ```
+
+After the installation change the font of your terminal to one of the powerline fonts.
 
 Notice that, now you will have another ``~/.bashrc``, that you can add
 anything you want without messing with the original ``~/.bashrc`` of
