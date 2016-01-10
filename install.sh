@@ -119,7 +119,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 command -v vim > /dev/null 2>&1 
 VIM_IS_AVAILABLE=$?
-if [ $VIM_IS_AVAILABLE -eq 0]; then
+if [ $VIM_IS_AVAILABLE -eq 0 ]; then
   echo "    Installing ViM plug-ins with Vundle..."
   vim +PluginInstall +qall
 fi
