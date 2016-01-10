@@ -117,7 +117,9 @@ fi
 echo "    Cloning Vudle (the plugin manager) from GitHub..."
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-if [ command -v vim > /dev/null 2>&1 ]; then
+command -v vim > /dev/null 2>&1 
+VIM_IS_AVAILABLE=$?
+if [ $VIM_IS_AVAILABLE -eq 0]; then
   echo "    Installing ViM plug-ins with Vundle..."
   vim +PluginInstall +qall
 fi
