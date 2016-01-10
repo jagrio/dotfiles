@@ -1,5 +1,7 @@
 # dotfiles
 
+[![Build Status](https://travis-ci.org/iSaran/dotfiles.svg?branch=master)](https://travis-ci.org/iSaran/dotfiles)
+
 This is a repo storing my configuration files.
 
 It's mainly for personal use (in order to use the same configuration in
