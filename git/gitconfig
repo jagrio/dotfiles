@@ -8,3 +8,15 @@
 
 [color]
   ui = true
+
+[core]
+  editor = vim
+
+[diff]
+  tool = vimdiff
+
+[difftool]
+  prompt = false
+
+[credential]
+  helper = cache --timeout 3600
