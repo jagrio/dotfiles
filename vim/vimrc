@@ -128,10 +128,10 @@ set list
 set listchars=tab:▸\ ,eol:¬
 
 "Highlight characters tha go beyond the 80th column in markdown files
-augroup vimrc_autocmds
-  autocmd FileType markdown highlight OverLength ctermfg=red ctermbg=None guibg=#592929
-  autocmd FileType markdown match OverLength /\%81v.*/
-augroup END
+"augroup vimrc_autocmds
+"  autocmd FileType markdown highlight OverLength ctermfg=red ctermbg=None guibg=#592929
+"  autocmd FileType markdown match OverLength /\%81v.*/
+"augroup END
 
 
 augroup vimrc_autocmds
