@@ -30,8 +30,8 @@ hi Special	    ctermfg=172         ctermbg=None        cterm=Bold
 hi Ignore       ctermfg=221         ctermbg=None        cterm=Bold
 hi Underline    ctermfg=147         ctermbg=None        cterm=Italic
 
-hi FoldColumn	ctermfg=132         ctermbg=None        cterm=None
-hi Folded       ctermfg=132         ctermbg=None        cterm=Bold
+hi FoldColumn	ctermfg=245         ctermbg=None        cterm=None
+hi Folded       ctermfg=245         ctermbg=None        cterm=Bold
 
 hi Visual       ctermfg=248         ctermbg=238         cterm=None
 
