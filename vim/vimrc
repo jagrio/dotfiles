@@ -63,8 +63,8 @@ au InsertEnter * hi StatusLine term=reverse ctermbg=39 ctermfg=53
 au InsertLeave * hi StatusLine term=reverse ctermbg=None ctermfg=39
 
 "Save the folds when you quit the file
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
+"autocmd BufWinLeave *.* mkview
+"autocmd BufWinEnter *.* silent loadview
 
 "Enable wrapping by \w
 noremap <silent> <Leader>w :call ToggleWrap()<CR>
