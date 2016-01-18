@@ -145,7 +145,7 @@ let mapleader = ','
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
 nnoremap <Leader>fs :set foldmethod=syntax<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
-nnoremap <Leader>gd :Gdiff<CR>
+nnoremap <Leader>gd :Gvdiff<CR>
 nnoremap <Leader>Y "+Y<CR>
 nnoremap <Leader>y "+y<CR>
 nnoremap <Leader>p "+p<CR>
