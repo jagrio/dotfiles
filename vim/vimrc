@@ -10,7 +10,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Raimondi/delimitMate'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
@@ -104,6 +105,7 @@ set autoindent
 au BufRead,BufNewFile *.launch set filetype=xml
 au BufRead,BufNewFile *.sdf set filetype=xml
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.cls set filetype=tex
 "autocmd BufNewFile,BufRead *.md set filetype=markdown
 
 "tab equals 2 spaces
@@ -146,11 +148,12 @@ nnoremap <Leader>rtw :%s/\s\+$//e<CR>
 nnoremap <Leader>fs :set foldmethod=syntax<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>gd :Gvdiff<CR>
+nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>Y "+Y<CR>
 nnoremap <Leader>y "+y<CR>
 nnoremap <Leader>p "+p<CR>
 nnoremap <Leader>P "+P<CR>
-nnoremap <Leader>b :bp<CR>
+nnoremap <Leader>k :bp<CR>
 nnoremap <Leader>j :bn<CR>
 nnoremap <Leader>c :bd<CR>
 nnoremap <Leader>c! :bd!<CR>
@@ -165,6 +168,8 @@ nnoremap <Leader>7 :7b<CR>
 nnoremap <Leader>8 :8b<CR>
 nnoremap <Leader>9 :9b<CR>
 nnoremap <Leader>0 :10b<CR>
+nnoremap <Leader>el :set keymap=greek_utf-8<CR>
+nnoremap <Leader>nel :set keymap=<CR>
 
 set hidden "hidden buffers, now u dont need to write a buffer if you want to change to another.
 
