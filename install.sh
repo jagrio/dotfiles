@@ -3,6 +3,10 @@
 
 echo "Installing dotfiles..."
 
+echo "  Installing dependencies"
+sudo apt-get install vim vim-gtk
+
+
 # Function that echos current path
 path() {
     [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
