@@ -16,6 +16,8 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
+Plugin 'rhysd/vim-clang-format'
+" Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -170,6 +172,7 @@ nnoremap <Leader>9 :9b<CR>
 nnoremap <Leader>0 :10b<CR>
 nnoremap <Leader>el :set keymap=greek_utf-8<CR>
 nnoremap <Leader>nel :set keymap=<CR>
+nnoremap <Leader>cf :ClangFormat<CR>
 
 set hidden "hidden buffers, now u dont need to write a buffer if you want to change to another.
 
@@ -183,4 +186,8 @@ let g:airline_theme='luna'
 let g:airline#extensions#tabline#enabled = 1 "Enable the list of buffers
 let g:airline#extensions#tabline#fnamemod = ':t' "Show just the filname
 
+" Ctrl-P configurations
 let g:ctrlp_map = '<c-p>'
+
+" Clang configurations
+let g:clang_format#command = 'clang-format-3.6'

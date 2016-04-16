@@ -4,7 +4,7 @@
 echo "Installing dotfiles..."
 
 echo "  Installing dependencies"
-sudo apt-get install vim vim-gtk
+sudo apt-get install vim vim-gtk git qgit tmux tree subversion pandoc pandoc-citeproc clang-format-3.6
 
 
 # Function that echos current path
