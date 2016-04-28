@@ -69,6 +69,18 @@ au InsertLeave * hi StatusLine term=reverse ctermbg=None ctermfg=39
 "autocmd BufWinLeave *.* mkview
 "autocmd BufWinEnter *.* silent loadview
 
+" Function that toggles between keymaps (greek and english)
+set keymap=
+function ToggleKeymap()
+  if &keymap ==# "greek_utf-8"
+    set keymap=
+    echo "Switched to english"
+  else
+    set keymap=greek_utf-8
+    echo "Switched to greek"
+  endif
+endfunction
+
 "Enable wrapping by \w
 noremap <silent> <Leader>w :call ToggleWrap()<CR>
 function ToggleWrap()
@@ -170,8 +182,7 @@ nnoremap <Leader>7 :7b<CR>
 nnoremap <Leader>8 :8b<CR>
 nnoremap <Leader>9 :9b<CR>
 nnoremap <Leader>0 :10b<CR>
-nnoremap <Leader>el :set keymap=greek_utf-8<CR>
-nnoremap <Leader>nel :set keymap=<CR>
+nnoremap <Leader>l  :call ToggleKeymap()<CR>
 nnoremap <Leader>cf :ClangFormat<CR>
 
 set hidden "hidden buffers, now u dont need to write a buffer if you want to change to another.
