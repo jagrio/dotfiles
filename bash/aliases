@@ -15,6 +15,7 @@ alias c='clear'
 # alias rm='rm -i'
 # alias mv='mv -i'
 # alias cp='cp -i'
+alias ll='ls -alF'
 
 # ROS aliases (make functions instead of aliases)
 alias rossource_ramcipws='source ~/ros_ws/ramcip_ws/devel/setup.bash'
