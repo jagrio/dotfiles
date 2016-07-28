@@ -15,12 +15,22 @@ then
   tmux new-session -s ${SESSION_NAME} -d -n 'Monitoring' 
   tmux split-window -h -p 75 -d 'htop'
 
-  tmux new-window -n 'vim'
-  tmux split-window -h -p 30
+  cd ~/ros_ws/auth_arl/src/
+  tmux new-window -n 'auth_arl'
+  cd ~/ros_ws/auth_arl
+  tmux split-window -p 10 
   tmux select-pane -t 1
 
-  cd ~/Dropbox/projects
-  tmux new-window -n 'projects'
+  cd ~/ros_ws/ramcip_ws/src/ramcip
+  tmux new-window -n 'ramcip'
+  tmux send-keys 'source ~/ros_ws/ramcip_ws/devel/setup.bash' 'C-m' 'clear' 'C-m'
+  cd ~/ros_ws/ramcip_ws/
+  tmux split-window -p 10
+  tmux send-keys 'source ~/ros_ws/ramcip_ws/devel/setup.bash' 'C-m' 'clear' 'C-m'
+  tmux select-pane -t 1
+
+  cd
+  tmux new-window -n 'misc'
   tmux split-window -h -p 30
   tmux select-pane -t 1
   

@@ -53,6 +53,7 @@ fi
 export LC_NUMERIC=C
 export LC_COLLATE=C
 export TERM="screen-256color"
+export TERM="xterm-color"
 export MYBASHRC=$DOTFILES_DIR/bash/mybashrc
 
 #export PS1=$'\e[38;5;202m\W \xe2\x96\xb8\e[m '
