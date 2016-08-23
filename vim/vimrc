@@ -117,6 +117,17 @@ function ToggleWrap()
   endif
 endfunction
 
+" Set relative number and also use
+" function that can toggles between relative and absolute
+set relativenumber
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set norelativenumber
+  else
+    set relativenumber
+  endif
+endfunc
+
 " Vim will keep the indetation when you go to the next line
 set autoindent
 
@@ -189,6 +200,7 @@ nnoremap <Leader>9 :9b<CR>
 nnoremap <Leader>0 :10b<CR>
 nnoremap <Leader>l  :call ToggleKeymap()<CR>
 nnoremap <Leader>cf :ClangFormat<CR>
+nnoremap <Leader>r :call NumberToggle()<CR>
 
 set hidden "hidden buffers, now u dont need to write a buffer if you want to change to another.
 
