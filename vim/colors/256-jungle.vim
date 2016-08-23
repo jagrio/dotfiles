@@ -29,6 +29,7 @@ hi Error	    ctermfg=None        ctermbg=196         cterm=Bold
 hi Special	    ctermfg=172         ctermbg=None        cterm=Bold
 hi Ignore       ctermfg=221         ctermbg=None        cterm=Bold
 hi Underline    ctermfg=147         ctermbg=None        cterm=Italic
+hi Cursorline ctermfg=None ctermbg=236 cterm=None
 
 hi FoldColumn	ctermfg=245         ctermbg=None        cterm=None
 hi Folded       ctermfg=245         ctermbg=None        cterm=Bold

@@ -41,6 +41,7 @@ set ruler "show ruler in the bottom right
 set showcmd "display a commad before it finished, helpful while learing
 set incsearch "enable incremental search (after pressing /)
 set hlsearch "enable highlighting in search
+set cursorline "highlight current line
 
 
 "Enable colorscheme
