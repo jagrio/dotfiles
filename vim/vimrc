@@ -19,6 +19,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'rhysd/vim-clang-format'
+Plugin 'fatih/vim-go'
 Plugin 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
 " Plugin 'Valloric/YouCompleteMe'
 
