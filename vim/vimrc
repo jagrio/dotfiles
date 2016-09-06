@@ -46,7 +46,7 @@ set cursorline "highlight current line
 
 "Enable colorscheme
 syntax on
-colorscheme 256-jungle
+colorscheme atom-dark-256
 "colorscheme sourcerer
 
 "Show encoding in status line
