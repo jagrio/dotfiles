@@ -56,8 +56,8 @@ hi markdownMath2  ctermfg=142 ctermbg=None  cterm=Bold
 
 hi DiffAdd        ctermfg=22  ctermbg=114   cterm=none gui=none guifg=233 guibg=119
 hi DiffDelete     ctermfg=52  ctermbg=None  cterm=none gui=none guifg=52  guibg=52
-hi DiffChange     ctermfg=244 ctermbg=250   cterm=none gui=none guifg=233 guibg=214
-hi DiffText       ctermfg=249 ctermbg=240   cterm=Bold gui=none guifg=233 guibg=202
+hi DiffChange     ctermfg=244 ctermbg=228   cterm=none gui=none guifg=233 guibg=214
+hi DiffText       ctermfg=232 ctermbg=220   cterm=Bold gui=none guifg=233 guibg=202
 
 "syntax include @tex syntax/tex.vim
 "syn region displaymaths matchgroup=mkdMaths start="\$" end="\$" contains=@texMathZoneGroup
