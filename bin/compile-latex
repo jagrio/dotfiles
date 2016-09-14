@@ -1,0 +1,7 @@
+#!/bin/bash
+
+while inotifywait -qq -e create --exclude '\.(swp|txt|tmp)' -r ./; do
+    sleep 1
+    pdflatex *tex
+    gnome-open *pdf
+done
