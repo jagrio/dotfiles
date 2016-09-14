@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# This is a script to install a new system
+
+# Install basics programs
+
+echo "Install git qgit vim tmux etc"
+sudo apt-get install git qgit vim vim-gtk tmux tree subversion pandoc pandoc-citeproc inotify-tools
+
+mkdir $HOME/deps
+cd $HOME/deps
+
+git clone https://github.com/powerline/fonts.git
+cd fonts
+./install.sh

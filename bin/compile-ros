@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if hash inotifywait 2>/dev/null; then-
+  while inotifywait -qq -e create --exclude '\.(swp|txt|tmp)' -r ./; do
+      sleep 1
+      catkin_make && catkin_make run_tests
+  done
+else
+  echo "You should install inotify-tools package first."
+fi
