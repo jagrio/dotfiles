@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 SESSION_NAME="MySession"
 
@@ -12,28 +12,28 @@ tmux has-session -t ${SESSION_NAME}
 
 if [ $? != 0 ]
 then
-  tmux new-session -s ${SESSION_NAME} -d -n 'Monitoring' 
+  tmux new-session -s ${SESSION_NAME} -d -n 'Monitoring'
   tmux split-window -h -p 75 -d 'htop'
 
   cd ~/ros_ws/auth_arl/src/
   tmux new-window -n 'auth_arl'
   cd ~/ros_ws/auth_arl
-  tmux split-window -p 10 
+  tmux split-window -p 10
   tmux select-pane -t 1
 
-  cd ~/ros_ws/ramcip_ws/src/ramcip
+  cd ~/workspace/ramcip/base/src/ramcip
   tmux new-window -n 'ramcip'
-  tmux send-keys 'source ~/ros_ws/ramcip_ws/devel/setup.bash' 'C-m' 'clear' 'C-m'
-  cd ~/ros_ws/ramcip_ws/
+  tmux send-keys 'source ~/workspace/ramcip/devel/setup.bash' 'C-m' 'clear' 'C-m'
+  cd ~/workspace/ramcip/base
   tmux split-window -p 10
-  tmux send-keys 'source ~/ros_ws/ramcip_ws/devel/setup.bash' 'C-m' 'clear' 'C-m'
+  tmux send-keys 'source ~/workspace/ramcip/devel/setup.bash' 'C-m' 'clear' 'C-m'
   tmux select-pane -t 1
 
   cd
   tmux new-window -n 'misc'
   tmux split-window -h -p 30
   tmux select-pane -t 1
-  
+
   cd ~
   tmux new-window -n 'Programs'
   tmux split-window -h -p 50
