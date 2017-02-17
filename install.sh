@@ -117,6 +117,10 @@ if [ $GIT_IS_AVAILABLE -ne 0 ]; then # If $? var is not 0 then git is not instal
   echo "    Git is not installed. Installing Git for git cloning..."
   sudo apt-get install git
 fi
+git config --global core.editor "vim"
+git config --global diff.tool vimdiff
+git config --global merge.tool vimdiff
+git config --global merge.conflictstyle diff3
 
 echo "    Cloning Vudle (the plugin manager) from GitHub..."
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim

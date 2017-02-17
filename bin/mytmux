@@ -23,10 +23,10 @@ then
 
   cd ~/workspace/ramcip/base/src/ramcip
   tmux new-window -n 'ramcip'
-  tmux send-keys 'source ~/workspace/ramcip/devel/setup.bash' 'C-m' 'clear' 'C-m'
+  tmux send-keys 'source ~/workspace/ramcip/base/devel/setup.bash' 'C-m' 'clear' 'C-m'
   cd ~/workspace/ramcip/base
   tmux split-window -p 10
-  tmux send-keys 'source ~/workspace/ramcip/devel/setup.bash' 'C-m' 'clear' 'C-m'
+  tmux send-keys 'source ~/workspace/ramcip/base/devel/setup.bash' 'C-m' 'clear' 'C-m'
   tmux select-pane -t 1
 
   cd
