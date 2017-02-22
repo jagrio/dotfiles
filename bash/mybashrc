@@ -8,54 +8,11 @@ if [ -f $DOTFILES_DIR/bash/functions.bash ]; then
     . $DOTFILES_DIR/bash/functions.bash
 fi
 
-# Source setup.bash for indigo ros if ros-indigo is installed
-if [ -f /opt/ros/indigo/setup.bash ]; then
-    . /opt/ros/indigo/setup.bash
-fi
-
-# Export to path texlive if Texlive2015 is installed
-if [ -d /usr/local/texlive/2015/bin/x86_64-linux ]; then
-    export PATH=/usr/local/texlive/2015/bin/x86_64-linux:$PATH
-fi
-
-# Export to path texlive if Texlive2016 is installed
-if [ -d /usr/local/texlive/2016/bin/x86_64-linux ]; then
-    export PATH=/usr/local/texlive/2016/bin/x86_64-linux:$PATH
-fi
-
 # Export to path Iason Dotfiles if dotfiles is installed
 if [ -d $DOTFILES_DIR/bin ]; then
     export PATH=$PATH:$DOTFILES_DIR/bin
 fi
 
-# Export to path Iason Dotfiles if dotfiles is installed
-if [ -d $HOME/Dropbox/code/scripts ]; then
-    export PATH=$PATH:$HOME/Dropbox/code/scripts
-fi
-
 if [ -f $DOTFILES_DIR/bash/prompt.bash ]; then
     . $DOTFILES_DIR/bash/prompt.bash
 fi
-
-# Set some variables
-export LC_NUMERIC=C
-export LC_COLLATE=C
-export TERM="screen-256color"
-export MYBASHRC=$DOTFILES_DIR/bash/mybashrc
-
-#export PS1=$'\e[38;5;202m\W \xe2\x96\xb8\e[m '
-#export PS1=$'\e[38;5;202m\W \xe2\x96\xb6\e[m '
-#source ~/ros_workspace/devel/setup.bash
-#export PATH=/usr/local/texlive/2014/bin/x86_64-linux:$PATH
-#source /opt/ros/indigo/setup.bash
-#export PS1=$'\e[38;5;202m\W \xe2\x96\xb8\e[m '
-
-
-## Define a function that founds the current path
-#path() {
-#    [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
-#}
-#
-#SCRIPT_DIR=`path $0`
-#MY_TEMP_DOTFILES=`dirname $SCRIPT_DIR`
-#DOTFILES_DIR=`dirname $MY_TEMP_DOTFILES`
