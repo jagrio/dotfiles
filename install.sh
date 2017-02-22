@@ -1,6 +1,55 @@
 #!/bin/bash 
 # Define variables
 
+VIM=0
+BASH=0
+PROMPT=0
+TMUX=0
+
+# If no arguments provided install everything
+if [ $# -eq 0 ]; then
+  VIM=1
+  BASH=1
+  PROMPT=1
+  TMUX=1
+  echo 'false'
+fi
+
+# Check the arguments and set the respective arguments
+for ARG in "$@"
+do
+  if [ "$ARG" = "vim" ]; then
+    VIM=1
+  else
+    if [ "$ARG" = "bash" ]; then
+      BASH=1
+    else
+      if [ "$ARG" = "prompt" ]; then
+        PROMPT=1
+      else
+        if [ "$ARG" = "tmux" ]; then
+          TMUX=1
+        else
+          echo "Argument $ARG is not valid. Exiting."
+          exit 1
+        fi
+      fi
+    fi
+  fi
+done
+
+echo "$VIM"
+echo "$BASH"
+echo "$PROMPT"
+echo "$TMUX"
+
+exit 0
+
+
+if [ $# -eq 0 ]; then
+
+exit 1
+
 echo "Installing dotfiles..."
 
 echo "  Installing dependencies"
