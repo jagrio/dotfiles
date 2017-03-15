@@ -38,12 +38,12 @@ function dotfiles {
   fi
 }
 
-function mytex{
+function mytex {
   if [ ! $1 ]; then
     echo "Can't compile nothing! Please provide one input tex file."
     echo "Give input tex file WITHOUT .tex suffix, e.g.: mytex input"
   else
-    if [[ $1 == *.* ]]
+    if [[ $1 == *.* ]]; then
       echo "Give input tex file WITHOUT suffix, e.g.: mytex input"
     else
       echo "Compiling tex file: $1"
