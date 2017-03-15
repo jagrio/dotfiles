@@ -3,7 +3,7 @@ if [ -f $DOTFILES_DIR/bash/aliases ]; then
     . $DOTFILES_DIR/bash/aliases
 fi
 
-# Source functions 
+# Source functions
 if [ -f $DOTFILES_DIR/bash/functions ]; then
     . $DOTFILES_DIR/bash/functions
 fi
@@ -31,15 +31,15 @@ if [ -d /usr/local/texlive/2016/bin/x86_64-linux ]; then
     export PATH=/usr/local/texlive/2016/bin/x86_64-linux:$PATH
 fi
 
-# Export to path Iason Dotfiles if dotfiles is installed
+# Export to path Jagrio Dotfiles if dotfiles is installed
 if [ -d $DOTFILES_DIR/bin ]; then
     export PATH=$PATH:$DOTFILES_DIR/bin
 fi
 
-# Export to path Iason Dotfiles if dotfiles is installed
-if [ -d $HOME/Dropbox/code/scripts ]; then
-    export PATH=$PATH:$HOME/Dropbox/code/scripts
-fi
+# Export to path Jagrio Dotfiles if dotfiles is installed
+#if [ -d $HOME/Dropbox/code/scripts ]; then
+#    export PATH=$PATH:$HOME/Dropbox/code/scripts
+#fi
 
 
 

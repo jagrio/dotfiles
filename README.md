@@ -1,6 +1,6 @@
 # dotfiles
 
-[![Build Status](https://travis-ci.org/iSaran/dotfiles.svg?branch=master)](https://travis-ci.org/iSaran/dotfiles)
+[![Build Status](https://travis-ci.org/jagrio/dotfiles.svg?branch=master)](https://travis-ci.org/jagrio/dotfiles)
 
 This is a repo storing my configuration files.
 
@@ -19,7 +19,7 @@ In order to install dotfiles open a shell and type the following commands
 (after you have changed to a desired directory).
 
 ```bash
-git clone https://github.com/iSaran/dotfiles.git
+git clone https://github.com/jagrio/dotfiles.git
 ./dotfiles/install.sh
 source ~/.bashrc
 ```

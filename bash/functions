@@ -1,6 +1,6 @@
 function my {
   if [ ! $1 ]; then
-    echo "No arguments" 
+    echo "No arguments"
   else
     if [ $1="dot" ]; then
       if [ $2="folder" ]; then
@@ -34,6 +34,28 @@ function dotfiles {
       echo
     else
       echo "dotfiles: "$1" command not found"
+    fi
+  fi
+}
+
+function mytex{
+  if [ ! $1 ]; then
+    echo "Can't compile nothing! Please provide one input tex file."
+    echo "Give input tex file WITHOUT .tex suffix, e.g.: mytex input"
+  else
+    if [[ $1 == *.* ]]
+      echo "Give input tex file WITHOUT suffix, e.g.: mytex input"
+    else
+      echo "Compiling tex file: $1"
+      latex $1.tex
+      bibtex $1.aux
+      latex $1.tex
+      latex $1.tex
+      dvips $1.dvi
+      ps2pdf $1.ps
+      dvi2pdf $1.dvi
+      echo "Showing pdf file: ${1%.*}.pdf"
+      gnome-open $1.pdf
     fi
   fi
 }

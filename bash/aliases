@@ -1,4 +1,4 @@
-alias start_dropbox='~/.dropbox-dist/dropboxd'
+#alias start_dropbox='~/.dropbox-dist/dropboxd'
 
 alias irssi='TERM=screen-256color irssi'
 alias htop='TERM=screen-256color htop'
@@ -24,7 +24,7 @@ alias rossource_development='source ~/ros_ws/development/devel/setup.bash'
 alias catkin_make_development='cd ~/ros_ws/development; catkin_make; cd -'
 
 # Shortcuts
-alias aptinstall='sudo apt-get install' 
+alias aptinstall='sudo apt-get install'
 alias sbh='source ~/.bashrc'
 alias vbh='vim ~/.bashrc'
 alias edit='vim'
