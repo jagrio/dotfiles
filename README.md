@@ -1,6 +1,4 @@
-# dotfiles (forked from [iSaran](https://github.com/iSaran/dotfiles))
-
-[![Build Status](https://travis-ci.org/jagrio/dotfiles.svg?branch=master)](https://travis-ci.org/jagrio/dotfiles)
+# dotfiles (forked from [iSaran](https://github.com/iSaran/dotfiles)) [![Build Status](https://travis-ci.org/jagrio/dotfiles.svg?branch=master)](https://travis-ci.org/jagrio/dotfiles)
 
 This is a repo storing my configuration files.
 
