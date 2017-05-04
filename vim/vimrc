@@ -21,6 +21,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'fatih/vim-go'
 Plugin 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
+Plugin 'jreybert/vimagit'
 " Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
