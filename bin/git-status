@@ -63,8 +63,13 @@ do
     if [ $(git status | grep 'Your branch is ahead' -c) -ne 0 ]
     then
         mod=1
+        echo "There are commits not merged in origin/master"
+    fi
+
+    # Check if there are unpushed commits with the origin's branch
+    if [[ $(git log origin/$branch..$branch) ]]; then
         echo -en "\033[0;31m"
-        echo "Unpushed commit"
+        echo "Unpushed commits to origin/$branch"
         echo -en "\033[0m"
     fi
 
